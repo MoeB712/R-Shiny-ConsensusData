@@ -7,28 +7,28 @@ All code that modified the appearance of the HTML page will be inside the fluidP
 
 - Shiny proivdes R functions to recreate HTML tags.
 
-	tags$h1() <=> <h1></h1>
-	tags$a()  <=> <a></a>
+	`tags$h1() <=> <h1></h1>`
+	`tags$a()  <=> <a></a>`
 
 	Can use `names(tags)` to see all different HTML names that can be associated with a tag.
 
 - Nested tags:
-
+```
 	fluidPage(
 		tags$p("This is a", tags$string("Shiny"), "app.")
 	)
-
-- tags$br(): Line break
-- tags$hr(): Horizontal line
+```
+- `tags$br()`: Line break
+- `tags$hr()`: Horizontal line
 
 - Images:
-	
+```
 	fluidPage(
 		tags$img(height = 100,
 			 width = 100,
 			 src = "http://www.rstudio.com/images/RStudio.2x.png")
 	)
-
+```
 	Note - All images (if not taken from the web) should be inside a `www` folder. Then browser will make anything inside
 	       that folder accessible to the web browser. Then just use the file name as the src instead of a URL.
 
