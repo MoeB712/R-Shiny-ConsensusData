@@ -29,8 +29,7 @@ All code that modified the appearance of the HTML page will be inside the fluidP
 			 src = "http://www.rstudio.com/images/RStudio.2x.png")
 	)
 ```
-	Note - All images (if not taken from the web) should be inside a `www` folder. Then browser will make anything inside
-	       that folder accessible to the web browser. Then just use the file name as the src instead of a URL.
+Note - All images (if not taken from the web) should be inside a `www` folder. Then browser will make anything inside that folder accessible to the web browser. Then just use the file name as the src instead of a URL.
 
 Reference: htmlTagFunctions.png for a list of all tags.
 
