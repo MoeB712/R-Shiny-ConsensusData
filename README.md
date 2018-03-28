@@ -1,6 +1,5 @@
 ## Project
 ##### "Shiny Web Application using Census Employment and Earnings Data in Michigan"
--------------------------------------------------------------------------------------------
 
 ## Summary
 Everyone has been talking about how the economy is slowly improving and the number of jobs 
