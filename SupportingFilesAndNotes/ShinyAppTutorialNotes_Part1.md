@@ -161,28 +161,33 @@ Server function: This function assembles your inputs into the outputs.
 3 rules to write a server function
 
 1) If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
+
 		`[ output$hist <- #code ]`
+		
 2) What you save in the output, should be something you build with a render function.
+
 		`[ output$hist <- renderPlot({}) ]`
 		
-		Render*() functions:
-		- An interactive table:
-			`[renderDataTable()]`
-		- An image (saved as a link to a source file):
-			`[renderImage()]`
-		- A plot:
-			`[renderPlot()]`
-		- A code block of printed output:
-			`[renderPrint()]`
-		- A table (from a data frame, matrix, or other table-like structures):
-			`[renderTable()]`
-		- A character string:
-			`[renderText()]`
-		- A shiny UI element:
-			`[renderUI()]`
+	Render*() functions:
+	- An interactive table:
+		`[renderDataTable()]`
+	- An image (saved as a link to a source file):
+		`[renderImage()]`
+	- A plot:
+		`[renderPlot()]`
+	- A code block of printed output:
+		`[renderPrint()]`
+	- A table (from a data frame, matrix, or other table-like structures):
+		`[renderTable()]`
+	- A character string:
+		`[renderText()]`
+	- A shiny UI element:
+		`[renderUI()]`
+			
 	Example: `renderPlot({ hist(rnorm(100)) })`
-			- renderPlot: Type of object to build
-			- `hist(rnorm(100))`: code block that builds the objects (in this case, builds 100 random normal numbers).
+	
+	- renderPlot: Type of object to build
+	- `hist(rnorm(100))`: code block that builds the objects (in this case, builds 100 random normal numbers).
 ```
 			-----------------------------------------------------
 			| server <- function(input, output) {
