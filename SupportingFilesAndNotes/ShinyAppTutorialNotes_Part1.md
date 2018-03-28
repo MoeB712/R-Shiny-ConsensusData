@@ -158,7 +158,7 @@ Server function: This function assembles your inputs into the outputs.
 	| }
 	--------------------------------------
 ```
-3 rules to write a server function
+##### 3 rules to write a server function
 
 1) If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
 
