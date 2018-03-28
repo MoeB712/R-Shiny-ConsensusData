@@ -1,6 +1,6 @@
-Project
+## Project
 -------------------------------------------------------------------------------------------
-"Shiny Web Application using Census Employment and Earnings Data in Michigan"
+##### "Shiny Web Application using Census Employment and Earnings Data in Michigan"
 -------------------------------------------------------------------------------------------
 
 Summary
@@ -17,16 +17,17 @@ framework. Shiny is a framework for R and works with Rstudio. I will use R and R
 learn Shiny and create interactive web applications so that it will be easier to visualize
 the data and see how employment and earning are affected within the last 5 and in particular
 see which groups are affected the most.
+
 -------------------------------------------------------------------------------------------
 
-Tools and Languages
+## Tools and Languages
 -------------------------------------------------------------------------------------------
- -R
- -Rstudio
- -Shiny Framework
+ * R
+ * Rstudio
+ * Shiny Framework
 -------------------------------------------------------------------------------------------
 
-Data Needs and Sources
+## Data Needs and Sources
 -------------------------------------------------------------------------------------------
 The data that I'll be working with is found on the census.gov website here:
 "https://qwiexplorer.ces.census.gov/static/explore.html"
@@ -51,10 +52,10 @@ doing this in Linux on a virtual machine. But I'm sure the Shiny website will ha
 instructions on how to get it setup on the machine.
 
 These are some, but I'm sure there will probably be more challenges that come up...
+
 -------------------------------------------------------------------------------------------
 
-
-Personal Learning Objectives
+## Personal Learning Objectives
 -------------------------------------------------------------------------------------------
 I will continue to get a better understanding of R and Rstudio. I will also have to learn the
 general modeling techniques so that my data and graphs aren't random and they help visualize
@@ -64,11 +65,12 @@ I use.
 
 My biggest learning object though is to learn the Siny framework on top of R to make my
 visualizations more interactive.
+
 -------------------------------------------------------------------------------------------
 
 
-Prep Instructions
-
+## Prep Instructions
+-------------------------------------------------------------------------------------------
 1) Packages needed to be installed:
 
 * install.packages("shiny")
@@ -87,3 +89,5 @@ Note: It took me a while to get Choroplethr packages to work and installed. Thes
 That's it!!
 
 I've also includes some supporting files I've typed up when I was learning to use Shiny. The files can be found in `/SupportingFilesAndNotes`.
+
+-------------------------------------------------------------------------------------------
