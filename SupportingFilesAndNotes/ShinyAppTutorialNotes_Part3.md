@@ -1,9 +1,9 @@
-SHINY APPLICATIONS TUTORIAL NOTES
-PART 3 - "How to customize appearance"
+## SHINY APPLICATIONS TUTORIAL NOTES
+### PART 3 - "How to customize appearance"
 
-- All code that modified the appearance of the HTML page will be inside the fluidPage() function which creates a UI object.
+All code that modified the appearance of the HTML page will be inside the fluidPage() function which creates a UI object.
 
-I) Static Elements
+#### 1) Static Elements
 
 - Shiny proivdes R functions to recreate HTML tags.
 
@@ -34,9 +34,7 @@ I) Static Elements
 
 Reference: htmlTagFunctions.png for a list of all tags.
 
-
-
-II) Layout
+#### 2) Layout
 
 - fluidRow(): Divides the page and adds a new 'row container' to the page. This can be used multiple times.
 - column():   Works with fluidRow() to place different objects into different columns inside the row container.
@@ -46,7 +44,7 @@ II) Layout
 		 In the second row container, there is also an offset argument which shows how much that column will offset from the
 		 start of the row.
 	Note: You can't have a column more than 12 units.	
-
+```
 	ui <- fluidPage(
 		
 		fluidRow(
@@ -55,12 +53,11 @@ II) Layout
 		fluidRow(
 			column(4, offset = 8)
 	)
-	
+```
 - Placing objects inside the containers:
 
 	Example:
-
-
+```
 	fluidPage(
 		fluidRow(
 			column(3),
@@ -70,13 +67,13 @@ II) Layout
 			column(4, offset = 8, plotOutput("hist"))
 		)
 	)
+```
 
 
-
-III) Layers of Panels
+#### 3) Layers of Panels
 
 - wellPanel(): You can group elements using this function if you put the sliderInput, textInput, etc. into this function. This will combine
-	       the two elements into a nice container automatically adjusting the width of everything to match.
+	the two elements into a nice container automatically adjusting the width of everything to match.
 
-	       Reference `panelList.png` for a list of different panels.
+	Reference `panelList.png` for a list of different panels.
 
