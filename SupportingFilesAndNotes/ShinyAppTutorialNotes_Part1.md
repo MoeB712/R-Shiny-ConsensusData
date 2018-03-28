@@ -1,5 +1,5 @@
 ## SHINY APPLICATIONS TUTORIAL NOTES
-###Part 1 - "How to build a Shiny App"
+### Part 1 - "How to build a Shiny App"
 
 1) Structure
 
@@ -18,56 +18,57 @@
 
 
 3) Shiny Template
+```
 			-------------------------------------
 			|library(shiny)
 	[UI Object]	|ui <- fluidPage()
-			|
 	[Serv Object]	|server <- function(input, ouput) {}
-			|
 	[Knitt Together]|shinyApp(ui = ui, server = server)
 			-------------------------------------
-
+```
 
 
 4) Inputs
 - Inputs: Parameters the user can toggle on the UI.
 
 - Add them in fluid page:
+```
 	--------------------------------------
 	| ui <- fluidPage(
 	|		#*Input() functions,
 	|	)
 	--------------------------------------
+```
 
 - Types of Input functions Shiny provides:
-	1. Buttons:
-		[actionButton()]
-		[submitButton()]
-	2. Single checkbox
-		[checkboxInput()]
-	3. Checkbox group
-		[checkboxGroupInput()]
-	4. Date input
-		[dateInput()]
-	5. Date range
-		[dateRangeInput()]
-	6. File input
-		[fileInput()]
-	7. Numeric input
-		[numericInput()]
-	8. Password Input
-		[passwordInput()]
-	9. Radio buttons
-		[radioButtons()]
-	10. Select box
-		[selectInput()]
-	11. Sliders
-		[sliderInput()]
-	12. Text input
-		[textInput()]		*Reference typesOfInputs.png*
+	- Buttons:
+		`[actionButton()]`
+		`[submitButton()]`
+	- Single checkbox
+		`[checkboxInput()]`
+	- Checkbox group
+		`[checkboxGroupInput()]`
+	- Date input
+		`[dateInput()]`
+	- Date range
+		`[dateRangeInput()]`
+	- File input
+		`[fileInput()]`
+	- Numeric input
+		`[numericInput()]`
+	- Password Input
+		`[passwordInput()]`
+	- Radio buttons
+		`[radioButtons()]`
+	- Select box
+		`[selectInput()]`
+	- Sliders
+		`[sliderInput()]`
+	- Text input
+		`[textInput()]		*Reference typesOfInputs.png*`
 
 - Input Syntax:
-	[ sliderInput(inputId = "num", label = "Choose a number", ...) ]
+	`[ sliderInput(inputId = "num", label = "Choose a number", ...) ]`
 	
 	- inputId (not ID): unique name for the input. Each input on the page should have it's own unique name.
 			    This will get used later to identify the input.
