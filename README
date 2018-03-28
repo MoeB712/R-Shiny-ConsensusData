@@ -1,9 +1,9 @@
-###Project
+Project
 -------------------------------------------------------------------------------------------
 "Shiny Web Application using Census Employment and Earnings Data in Michigan"
 -------------------------------------------------------------------------------------------
 
-###Summary
+Summary
 -------------------------------------------------------------------------------------------
 Everyone has been talking about how the economy is slowly improving and the number of jobs 
 available is going up. I got curious and found data related to Employment and Earnings from
@@ -19,14 +19,14 @@ the data and see how employment and earning are affected within the last 5 and i
 see which groups are affected the most.
 -------------------------------------------------------------------------------------------
 
-###Tools and Languages
+Tools and Languages
 -------------------------------------------------------------------------------------------
- R
- Rstudio
- Shiny Framework
+ -R
+ -Rstudio
+ -Shiny Framework
 -------------------------------------------------------------------------------------------
 
-###Data Needs and Sources
+Data Needs and Sources
 -------------------------------------------------------------------------------------------
 The data that I'll be working with is found on the census.gov website here:
 "https://qwiexplorer.ces.census.gov/static/explore.html"
@@ -54,7 +54,7 @@ These are some, but I'm sure there will probably be more challenges that come up
 -------------------------------------------------------------------------------------------
 
 
-###Personal Learning Objectives
+Personal Learning Objectives
 -------------------------------------------------------------------------------------------
 I will continue to get a better understanding of R and Rstudio. I will also have to learn the
 general modeling techniques so that my data and graphs aren't random and they help visualize
@@ -67,7 +67,7 @@ visualizations more interactive.
 -------------------------------------------------------------------------------------------
 
 
-###Prep Instructions
+Prep Instructions
 
 1) Packages needed to be installed:
 
