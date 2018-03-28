@@ -1,12 +1,12 @@
-SHINY APPLICATIONS TUTORIAL NOTES
-Part 2 - "How to customize reactions"
+## SHINY APPLICATIONS TUTORIAL NOTES
+### Part 2 - "How to customize reactions"
 
-I) Reactivity
+#### 1) Reactivity
+
 - How changes in the input objects (intput$x) propagate to the output objects (output$y).
 
+#### 2) Reactive Values
 
-
-II) Reactive Values
 - Also input values like input$x.
 - Reactive values should always be paired with reactive functions, such as renderPlot().
 
@@ -20,7 +20,8 @@ II) Reactive Values
 
 
 
-III) Reactive Toolkit (7 indispensible functions)
+#### 3) Reactive Toolkit (7 indispensible functions)
+
 1) render*() function - Displays output like graphs and charts (as described in Part 1).
 2) reactive() function - Builds a reactive object to use (reactive expression).
 
