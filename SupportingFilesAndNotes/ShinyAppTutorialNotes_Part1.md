@@ -159,9 +159,10 @@ Server function: This function assembles your inputs into the outputs.
 	--------------------------------------
 ```
 3 rules to write a server function
-	1. If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
+
+1) If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
 		`[ output$hist <- #code ]`
-	2. What you save in the output, should be something you build with a render function.
+2) What you save in the output, should be something you build with a render function.
 		`[ output$hist <- renderPlot({}) ]`
 		
 		Render*() functions:
@@ -194,7 +195,7 @@ Server function: This function assembles your inputs into the outputs.
 			-----------------------------------------------------
 ```
 
-	3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing the inputs.
+3) Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing the inputs.
 	
 ```
 			------------------------------------------------------
