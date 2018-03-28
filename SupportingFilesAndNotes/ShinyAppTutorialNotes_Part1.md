@@ -181,8 +181,9 @@ Example: plotOutput()
 			`[renderUI()]`
 
 	Example: `renderPlot({ hist(rnorm(100)) })` - 
-				renderPlot: Type of object to build
-				hist(rnorm(100)): code block that builds the objects (in this case, builds 100 random normal numbers).
+				- renderPlot: Type of object to build
+				- `hist(rnorm(100))`: code block that builds the objects (in this case, builds 100 random normal numbers).
+
 ```
 			-----------------------------------------------------
 			| server <- function(input, output) {
@@ -194,8 +195,9 @@ Example: plotOutput()
 			| }
 			-----------------------------------------------------
 ```
-	3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing
-	   the inputs.
+
+	3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing the inputs.
+	
 ```
 			------------------------------------------------------
 			| server <- function(input, output) {
