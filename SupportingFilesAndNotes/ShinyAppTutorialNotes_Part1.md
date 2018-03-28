@@ -150,7 +150,7 @@ Example: plotOutput()
 ```
 
 #### 6) Server
-- Server function: This function assembles your inputs into the outputs.
+Server function: This function assembles your inputs into the outputs.
 ```
 	--------------------------------------
 	| server <- function(input, output) {
@@ -158,13 +158,13 @@ Example: plotOutput()
 	| }
 	--------------------------------------
 ```
-- 3 rules to write a server function
-	1. If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
+3 rules to write a server function
+1. If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
 		`[ output$hist <- #code ]`
-	2. What you save in the output, should be something you build with a render function.
+2. What you save in the output, should be something you build with a render function.
 		`[ output$hist <- renderPlot({}) ]`
-
-	Render*() functions:
+		
+		Render*() functions:
 		- An interactive table:
 			`[renderDataTable()]`
 		- An image (saved as a link to a source file):
@@ -179,11 +179,9 @@ Example: plotOutput()
 			`[renderText()]`
 		- A shiny UI element:
 			`[renderUI()]`
-
-	Example: `renderPlot({ hist(rnorm(100)) })` - 
-				- renderPlot: Type of object to build
-				- `hist(rnorm(100))`: code block that builds the objects (in this case, builds 100 random normal numbers).
-
+	Example: `renderPlot({ hist(rnorm(100)) })`
+			- renderPlot: Type of object to build
+			- `hist(rnorm(100))`: code block that builds the objects (in this case, builds 100 random normal numbers).
 ```
 			-----------------------------------------------------
 			| server <- function(input, output) {
@@ -195,9 +193,7 @@ Example: plotOutput()
 			| }
 			-----------------------------------------------------
 ```
-
-	3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing the inputs.
-	
+3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing the inputs.	
 ```
 			------------------------------------------------------
 			| server <- function(input, output) {
