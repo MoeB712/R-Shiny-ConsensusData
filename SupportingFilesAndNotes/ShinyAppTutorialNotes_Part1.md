@@ -32,7 +32,6 @@
 
 #### 4) Inputs
 - Inputs: Parameters the user can toggle on the UI.
-
 - Add them in fluid page:
 ```
 	--------------------------------------
@@ -78,7 +77,8 @@
 	- ...: input specific arguments. Arguments are different for each input. Use `?sliderInput` for information.
 	       For slider input, an argument might be min and max numbers.
 
-Example: sliderInput()
+	Example: sliderInput()
+```
 	-----------------------------------------------------------	
 	| library(shiny)
 	| ui <- fluidPage(
@@ -91,44 +91,46 @@ Example: sliderInput()
 	|
 	| shinyApp(ui = ui, server = server)
 	-----------------------------------------------------------
+```
 
 
 #### 5) Outputs
 - Outputs: R objects that get updated and that the user sees.
-
 - Add them in fluid page:
+```
 	--------------------------------------
 	| ui <- fluidPage(
 	|		#*Input() functions,
 	|		#*Output() functions
 	|	)
 	--------------------------------------
+```
 
 - Types of Output functions Shiny provides:
-	1. An interactive table:
-		[dataTableOutput()]
-	2. Raw HTML:
-		[htmlOutput()]
-	3. Image:
-		[imageOutput()]
-	4. Plot:
-		[plotOutput()]
-	5. Table:
-		[tableOutput()]
-	6. Text:
-		[textOutput()]
-	7. A Shiny UI element:
-		[uiOutput()]
-	8. Text:
-		[verbatimTextOutput()]
+	- An interactive table:
+		`[dataTableOutput()]`
+	- Raw HTML:
+		`[htmlOutput()]`
+	- Image:
+		`[imageOutput()]`
+	- Plot:
+		`[plotOutput()]`
+	- Table:
+		`[tableOutput()]`
+	- Text:
+		`[textOutput()]`
+	- A Shiny UI element:
+		`[uiOutput()]`
+	- Text:
+		`[verbatimTextOutput()]`
 	
 - Output Syntax:
-	[ plotOutput(outputId = "hist" ]
-
+	`[ plotOutput(outputId = "hist" ]`
 	- plot: type of output to display
 	- outputId: one required argument to provide a unique name for the output (just like inputId).
 
 Example: plotOutput()
+```
 	-----------------------------------------------------------	
 	| library(shiny)
 	| ui <- fluidPage(
@@ -145,44 +147,43 @@ Example: plotOutput()
 
 	Note: Nothing will display on the HTML web page. However this will allocate space on the page for the
 	      object. The actual object (or plot) will have to be built inside the server object.
-
-
+```
 
 #### 6) Server
 - Server function: This function assembles your inputs into the outputs.
-
+```
 	--------------------------------------
 	| server <- function(input, output) {
 	|
 	| }
 	--------------------------------------
-
+```
 - 3 rules to write a server function
 	1. If you're building an output object, always save that object to `output$..`. Use the same name as inputId.
-		[ output$hist <- #code ]
+		`[ output$hist <- #code ]`
 	2. What you save in the output, should be something you build with a render function.
-		[ output$hist <- renderPlot({}) ]
+		`[ output$hist <- renderPlot({}) ]`
 
-		Render*() functions:
+	Render*() functions:
 		- An interactive table:
-			[renderDataTable()]
+			`[renderDataTable()]`
 		- An image (saved as a link to a source file):
-			[renderImage()]
+			`[renderImage()]`
 		- A plot:
-			[renderPlot()]
+			`[renderPlot()]`
 		- A code block of printed output:
-			[renderPrint()]
+			`[renderPrint()]`
 		- A table (from a data frame, matrix, or other table-like structures):
-			[renderTable()]
+			`[renderTable()]`
 		- A character string:
-			[renderText()]
+			`[renderText()]`
 		- A shiny UI element:
-			[renderUI()]
+			`[renderUI()]`
 
-		Example: renderPlot({ hist(rnorm(100)) }) - 
+	Example: `renderPlot({ hist(rnorm(100)) })` - 
 				renderPlot: Type of object to build
 				hist(rnorm(100)): code block that builds the objects (in this case, builds 100 random normal numbers).
-
+```
 			-----------------------------------------------------
 			| server <- function(input, output) {
 			|	output$hist <- renderPlot({
@@ -192,10 +193,10 @@ Example: plotOutput()
 			|	})
 			| }
 			-----------------------------------------------------
-
+```
 	3. Use input values with input$ (once again, same name as the inputId). These value are always UP-TO-DATE as the user is changing
 	   the inputs.
-
+```
 			------------------------------------------------------
 			| server <- function(input, output) {
 			|
@@ -206,3 +207,4 @@ Example: plotOutput()
 			|
 			| }
 			------------------------------------------------------
+```
